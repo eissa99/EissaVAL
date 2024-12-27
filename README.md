@@ -33,12 +33,14 @@ Integrated Twitch & Discord bot with OBS support 🎮
 ## 🚀 Installation
 
 1. Install packages:
-\`\`\`bash
-npm install
-\`\`\`
 
-2. Configure \`config.json\`:
-\`\`\`json
+```bash
+npm install
+```
+
+2. Configure `config.json`:
+
+```json
 {
     "OBS": {
         "address": "ws://localhost:4455",
@@ -52,7 +54,7 @@ npm install
         "apiKey": "your-deepgram-key"
     }
 }
-\`\`\`
+```
 
 ## 📝 Commands
 
@@ -62,41 +64,41 @@ npm install
 - Change title: "hey bot change title to ..."
 
 ### Twitch
-- \`!clip\` - Create clip of current moment
-- \`!rank\` - Show Valorant rank
-- \`!scene\` - Change OBS scene
-- \`!mouse\` - Mouse information
-- \`!sens\` - Sensitivity settings
+- `!clip` - Create clip of current moment
+- `!rank` - Show Valorant rank
+- `!scene` - Change OBS scene
+- `!mouse` - Mouse information
+- `!sens` - Sensitivity settings
 
 ### Discord
-- \`/alert\` - Add channel to alerts
-- \`/refresh\` - Update commands
+- `/alert` - Add channel to alerts
+- `/refresh` - Update commands
 
 ## 📊 Logging System
 
-- 📁 Error logs in \`logs/error.log\`
-- 📁 Combined logs in \`logs/combined.log\`
+- 📁 Error logs in `logs/error.log`
+- 📁 Combined logs in `logs/combined.log`
 - 🎨 Colorized console logging
 - 📊 Timestamped operations
 
 ## 🛠️ Customization
 
 ### Auto Responses
-Modify responses in \`src/twitch/config/auto-responses.js\`:
+Modify responses in `src/twitch/config/auto-responses.js`:
 
-\`\`\`js
+```js
 module.exports = {
     greetings: {
-        'hello': (username) => \`@\${username} Welcome!\`,
+        'hello': (username) => `@${username} Welcome!`,
     },
     homies: {
         'username': 'custom-response'
     }
 };
-\`\`\`
+```
 
 ### Voice Commands
-Customize voice commands and add new ones in \`src/voice/commands/\`:
+Customize voice commands and add new ones in `src/voice/commands/`:
 - Modify command keywords
 - Add new commands
 - Customize voice responses
